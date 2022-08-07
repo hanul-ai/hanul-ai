@@ -1,5 +1,6 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
+import Main from "./pages/main/index";
 import Login from './pages/Login/index';
 import SignUp from './pages/SignUp/index';
 import MainPage from './pages/main/index';
@@ -11,6 +12,9 @@ function App() {
             <header>
             </header>
             <main>
+                <Route path="/main">
+                    <Main />
+                </Route>
                 <Route path="/login">
                     <Login />
                 </Route>
