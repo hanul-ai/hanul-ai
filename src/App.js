@@ -2,6 +2,7 @@ import React from 'react';
 import {Route} from 'react-router-dom';
 import Login from './pages/Login/index';
 import SignUp from './pages/SignUp/index';
+import MainPage from './pages/main/index';
 
 function App() {
     return (
@@ -15,6 +16,9 @@ function App() {
                 </Route>
                 <Route path="/signUp">
                     <SignUp />
+                </Route>
+                <Route path="/mainPage">
+                    <MainPage />
                 </Route>
                 {/* params를 사용하여 동적 경로 추가하기
                 /:뒤에 그것에 대한 이름을 붙이고 아무값이나 넣어서 사용할 수 있다.
