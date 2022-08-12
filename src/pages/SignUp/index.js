@@ -17,7 +17,6 @@ function Signup() {
         <div className={classes.form}>
           <img className={classes.formLogo} src="https://dc-static.wondershare.com/wsid/com/static/brand/onlineuniconverter.svg" />
           <h4 className={classes.formName}>순돌의 두배로 커지는 사진관</h4>
-          <h4 className={classes.testStyle}>dfdf</h4>
           {/* 다른 로그인 영역 */}
           <div className={classes.formOtherSignUpList}>
             <a>

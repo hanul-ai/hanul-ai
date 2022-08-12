@@ -22,7 +22,6 @@ const useStyles = makeStyles({
         padding: '40px 32px 16px',
         minHeight: '512px',
         width: '100%',
-        position: 'relative',
         boxSizing: 'border-box',
     },
     formName : {
