@@ -2,10 +2,6 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
 
-    testStyle : {
-        
-    },
-
     pageWrap : {
         background: 'linear-gradient(89.03deg,#0d0521,#31137c 51.85%,#761796 99.06%)',
         height: '100vh',
@@ -27,7 +23,6 @@ const useStyles = makeStyles({
         padding: '40px 32px 16px',
         minHeight: '512px',
         width: '100%',
-        position: 'relative',
         boxSizing: 'border-box',
     },
     formName : {
