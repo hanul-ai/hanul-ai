@@ -15,39 +15,74 @@ const Footer = () => {
           </div>
 
           <div className={fStyle.divRight}>
-            <div className={fStyle.divR1}>
-              <b>회사소개</b>
-              <ul className={fStyle.ul}>
-                <li>
-                  Wondershare의 스토리
-                </li>
-                <li>
-                  Wondershare의 운영 철학
-                </li>
-                <li>
-                  대표자 인사
-                </li>
-                <li>
-                  글로벌 사무실
-                </li>
-              </ul>
-            </div>
-            <div className={fStyle.divR2}>
-              <b>고객지원</b>
-              <ul className={fStyle.ul}>
-                <li>
-                  제휴문의
-                </li>
-                <li>
-                  메일문의
-                </li>
-              </ul>
-            </div>
-            <div className={fStyle.divR3}>
-              <b>그룹 멤버</b>
 
-              
+            <div className={fStyle.divRTop}>
+                
+              <div className={fStyle.divR1}>
+                <b>회사소개</b>
+                <ul className={fStyle.ul}>
+                  <li>
+                    Wondershare의 스토리
+                  </li>
+                  <li>
+                    Wondershare의 운영 철학
+                  </li>
+                  <li>
+                    대표자 인사
+                  </li>
+                  <li>
+                    글로벌 사무실
+                  </li>
+                </ul>
+              </div>
+
+              <div className={fStyle.divR2}>
+                <b>고객지원</b>
+                <ul className={fStyle.ul}>
+                  <li>
+                    제휴문의
+                  </li>
+                  <li>
+                    메일문의
+                  </li>
+                </ul>
+              </div>
+
+              <div className={fStyle.divR3}>
+                <b>그룹 멤버</b>
+              </div>
+
             </div>
+
+            <div className={fStyle.divRBottom}>
+              <ul className={fStyle.ul}>
+                <li className={fStyle.li}>
+                  인기제품
+                </li>
+                <li className={fStyle.li}>
+                  Filmora
+                </li>
+                <li className={fStyle.li}>
+                  UniConverter
+                </li>
+                <li className={fStyle.li}>
+                  Recoverit
+                </li>
+                <li className={fStyle.li}>
+                  Dr.Fone
+                </li>
+                <li className={fStyle.li}>
+                  PDFelement
+                </li>
+                <li className={fStyle.li}>
+                  FamiSafe
+                </li>
+              </ul>
+            
+            </div>
+
+
+
           </div>
 
         </div>
