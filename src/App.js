@@ -1,6 +1,7 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
 import Main from "./pages/main/index";
+import Tools from "./pages/Tools/index";
 import Login from './pages/Login/index';
 import SignUp from './pages/SignUp/index';
 import MainPage from './pages/main/index';
@@ -17,6 +18,7 @@ function App() {
             <main>
                 <Route path="/main">
                     <Main />
+                    <Tools />
                 </Route>
                 <Route path="/login">
                     <Login />
