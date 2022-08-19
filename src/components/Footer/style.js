@@ -48,8 +48,6 @@ const footerStyles = makeStyles((theme)=>({
     float:'top',
     height:'70%',
     marginLeft:'10%'
-
-
   },
 
   divRBottom:{
@@ -57,16 +55,12 @@ const footerStyles = makeStyles((theme)=>({
     height:'30%',
     float:'bottom',
     marginLeft:'10%'
-
-
   },
 
   divR1:{
     float:'left',
     width:'33%',
     paddingTop:'70px',
-
-
   },
 
   divR2:{
