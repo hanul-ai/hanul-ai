@@ -10,13 +10,13 @@ const useStyles = makeStyles({
         justifyContent: 'space-around'
     },
     form : {
-        ['@media screen and (min-width: 800px)']:{
+        ['@media screen and (min-width: 900px)']:{
             maxWidth: '400px',
             flex: '0 0 400px',
             borderRadius: '8px',
             marginRight: '5vw',
         },
-        ['@media screen and (max-width: 800px)']:{
+        ['@media screen and (max-width: 900px)']:{
             height : '100%'
         },
         backgroundColor: '#fff',
@@ -176,10 +176,13 @@ const useStyles = makeStyles({
         cursor: 'pointer',
     },
     introImage : {
-        ['@media screen and (min-width: 800px)']:{
-            display : 'block',
+        ['@media screen and (max-width: 1200px)']:{
+            maxWidth: '450px',
         },
-        display: 'none',
+        ['@media screen and (max-width: 900px)']:{
+            display: 'none',
+        },
+        display : 'block',
         width: '28vw',
         maxWidth: '538px',
         flex: '0 0 515px',
