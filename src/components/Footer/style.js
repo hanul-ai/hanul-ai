@@ -79,7 +79,22 @@ const footerStyles = makeStyles((theme)=>({
   divR3:{
     float:'left',
     width:'33%',
-    paddingTop:'70px'
+    paddingTop:'70px',
+    
+
+  },
+
+  divR3_1:{
+    float:'top',
+    width:'100%',
+    height:'50%',
+
+  },
+
+  divR3_2:{
+    float:'bottom',
+    width:'100%',
+    height:'50%',
 
   },
 
@@ -91,11 +106,24 @@ const footerStyles = makeStyles((theme)=>({
   },
 
   divImg:{
-    marginLeft:'100px',
+    marginLeft:'50%',
     marginTop:'100px',
     // vertical_align:'right'
     // width:'100%',
     // height:'100%'
+
+  },
+
+  divLast_1:{
+    float:'top',
+    width:'100%',
+    height:'20%'
+  },
+
+  divLast_2:{
+    float:'bottom',
+    width:'100%',
+    height:'80%'
 
   },
 
@@ -111,6 +139,18 @@ const footerStyles = makeStyles((theme)=>({
     marginLeft:'30px',
     fontSize:'12px'
   },
+
+  liSns:{
+    float:'left',
+    marginLeft:'10px',
+  },
+
+  liBest:{
+    float:'left',
+    marginLeft:'30px',
+    fontSize:'12px'
+  },
+
 
   select:{
     width:'15%',

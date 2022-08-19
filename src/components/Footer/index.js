@@ -1,5 +1,11 @@
 import React from 'react';
 import footerStyles from './style';
+import {IoLogoInstagram} from "react-icons/io";
+import {VscTwitter} from "react-icons/vsc";
+import {ImPlay} from "react-icons/im";
+import {BiDotsHorizontalRounded} from "react-icons/bi";
+
+
 
 const Footer = () => {
   const fStyle=footerStyles();
@@ -11,7 +17,7 @@ const Footer = () => {
         <div className={fStyle.divTop}>  
 
           <div className={fStyle.divLift}>
-            <img className={fStyle.divImg} src='img/FooterLogo.png' />
+            <img className={fStyle.divImg} src='https://neveragain.allstatics.com/2019/assets/icon/logo/wondershare-slogan-vertical-white.svg' />
           </div>
 
           <div className={fStyle.divRight}>
@@ -50,6 +56,29 @@ const Footer = () => {
 
               <div className={fStyle.divR3}>
                 <b>그룹 멤버</b>
+                <div className={fStyle.div3_1}>
+                  <img src='https://neveragain.allstatics.com/2019/assets/icon/logo/edraw-horizontal-white.svg' width='40%'/>
+                
+                </div>
+                <div className={fStyle.div3_2}>
+                  <b>SNS</b>
+                  <ul className={fStyle.ul}>
+                    <li className={fStyle.liSns}>
+                      <IoLogoInstagram/>
+                    </li>
+                    <li className={fStyle.liSns}>
+                      <VscTwitter />
+                    </li>
+                    <li className={fStyle.liSns}>
+                      <ImPlay />
+                    </li>
+                    <li className={fStyle.liSns}>
+                      <BiDotsHorizontalRounded />
+                    </li>
+
+                  </ul>
+
+                </div>
               </div>
 
             </div>
@@ -78,17 +107,12 @@ const Footer = () => {
                   FamiSafe
                 </li>
               </ul>
-            
             </div>
-
-
-
           </div>
-
         </div>
 
         <div className={fStyle.divBottom}>
-          <div>
+          <div className={fStyle.divLast_1}>
             <ul className={fStyle.ul}>
               <li className={fStyle.li}>
                 이용약관
@@ -108,17 +132,18 @@ const Footer = () => {
               <li className={fStyle.li}>
                 제거방법
               </li>
+            </ul>
 
-              <div>
+
+          </div>
+
+          <div className={fStyle.divLast_2}>
                 <ul className={fStyle.ul}>
                   <li className={fStyle.li}>
                   Copyright © 2022 Wondershare. All rights reserved. The order process, tax issue and invoicing to end user is conducted by Wondershare Technology Co., Ltd, which is the subsidiary of Wondershare group.
                   </li>
                 </ul>
               </div>
-
-            </ul>
-          </div>
 
           <div className={fStyle.select}>
             <select>
