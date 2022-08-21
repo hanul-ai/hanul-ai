@@ -1,0 +1,16 @@
+dump 파일 만들기~
+
+● DB dump 만들기
+ 1) mysql client 관리자 권한으로 실행
+ 2) quit 명령어 입력
+ 3) MariaDB bin 폴더로 위치 이동(cd /Program Files ~)
+ 4) mysqldump -u root -p [dump만드는 DB명] > [파일명]
+ 5) 비번입력
+ 6) 쨘☆ 완성됨
+
+● DB 적용
+ 1) mysql client 실행
+ 2) quit 명령어 입력
+ 3) MariaDB bin 폴더 위치로 이동
+ 4) mysql -u root -p [적용할 DB명] < [적용할 파일명]
+ 5) 쨘☆ 적용됨
