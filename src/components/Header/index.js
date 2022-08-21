@@ -1,6 +1,6 @@
 import React from 'react';
 import headerStyles from './style';
-import {TiZoom} from "react-icons/ti";
+import {TbZoomCheck} from "react-icons/tb";
 
 const Header = () => {
   const hStyle=headerStyles();
@@ -11,8 +11,7 @@ const Header = () => {
       <div className={hStyle.contents}>
 
         <nav className={hStyle.navigation}>
-
-          <img src='img/MediaImg.png' width="100px" height="40px"/>
+          <img src="https://neveragain.allstatics.com/2019/assets/icon/logo/online-uniconverter-header.svg" />
 
           <ul className={hStyle.ul}>
             <li className={hStyle.li}>
@@ -34,7 +33,7 @@ const Header = () => {
               로그인
             </li>
             <li className={hStyle.li}>
-              <TiZoom />
+              <TbZoomCheck />
             </li>
           </ul>
         </nav>
