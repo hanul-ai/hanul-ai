@@ -37,25 +37,6 @@ function Login() {
               순돌의 두배 ID가 없습니까? <Link to='/signUp' className={classes.formToLoginLink}>순돌의 두배 계정 만들기</Link>
             </p>
           </div>
-          {/* 영역 분리 구간 */}
-          <div className={classes.formDivArea}>
-            <span className={classes.formDivAreaLine}>기타 로그인 방식</span>
-          </div>
-          {/* 다른 로그인 영역 */}
-          <div className={classes.formOtherLoginList}>
-            <a>
-              <img src={googleLoginImg}/>
-            </a>
-            <a>
-              <img src={facebookLoginImg}/>
-            </a>
-            <a>
-              <img src={twitterLoginImg}/>
-            </a>
-            <a>
-              <img src={appleLoginImg}/>
-            </a>
-          </div>
           <div className={classes.formLinkArea}>
             <div className={classes.formToPolicyArea}>
               순돌의 두배 <a className={classes.formToPolicyLink}>이용약관</a>
