@@ -5,120 +5,55 @@ const footerStyles = makeStyles((theme)=>({
     background:'#000000',
     color:'#FFFFFF',
     width:'100%',
-    height:'559px',
-    marginBottom:'10px'
+    height:'300px',
 
   },
 
   divTop:{
-    width:'100%',
-    height:'80%',
-    float:'top',
-    borderBottom:'1px solid'
-
+    borderBottom:'1px solid',
+    display : 'flex',
   },
 
   divBottom:{
-    width:'100%',
-    height:'20%',
-    float:'bottom',
-    //flex:1
+    ['@media screen and (max-width: 900px)']:{
+      flexDirection: 'column',
+    },
+    display : 'flex',
   },
 
-  divLift:{
-    width:'31%',
-    float:'left',
-    height:'100%',
+  divLeft:{
+    ['@media screen and (max-width: 900px)']:{
+      display : 'none'
+    },
+    width:'250px',
     borderRight:'1px solid'
-
-    //flex:1
-  },
-
-  divRight:{
-    width:'68%',
-    float:'right',
-    height:'100%',
-
-    //flex:1
-
-  },
-
-  divRTop:{
-    width:'100%',
-    float:'top',
-    height:'70%',
-    marginLeft:'10%'
-  },
-
-  divRBottom:{
-    width:'100%',
-    height:'30%',
-    float:'bottom',
-    marginLeft:'10%'
-  },
-
-  divR1:{
-    float:'left',
-    width:'33%',
-    paddingTop:'70px',
-  },
-
-  divR2:{
-    float:'left',
-    width:'33%',
-    paddingTop:'70px'
-
-  },
-
-  divR3:{
-    float:'left',
-    width:'33%',
-    paddingTop:'70px',
-    
-
-  },
-
-  divR3_1:{
-    float:'top',
-    width:'100%',
-    height:'50%',
-
-  },
-
-  divR3_2:{
-    float:'bottom',
-    width:'100%',
-    height:'50%',
-
-  },
-
-
-  divR4:{
-    float:'bottom',
-    width:'100%',
-    height:'20%'
   },
 
   divImg:{
-    marginLeft:'50%',
-    marginTop:'100px',
-    // vertical_align:'right'
-    // width:'100%',
-    // height:'100%'
-
+    margin: 'auto',
+    display: 'block',
+    width: '200px',
   },
 
-  divLast_1:{
-    float:'top',
-    width:'100%',
-    height:'20%'
+  divRight:{
+    display : 'flex',
+    height:'100%',
+    flex:1,
   },
 
-  divLast_2:{
-    float:'bottom',
-    width:'100%',
-    height:'80%'
+  divR:{
+    flex : 1,
+    paddingTop:'40px',
+    marginLeft:'30px',
+  },
 
+  foundingYear:{
+    ['@media screen and (max-width: 900px)']:{
+      alignSelf: 'baseline',
+    },
+    marginLeft : '30px',
+    fontSize: '12px',
+    alignSelf: 'center',
   },
 
   ul:{
@@ -133,27 +68,6 @@ const footerStyles = makeStyles((theme)=>({
     marginLeft:'30px',
     fontSize:'12px'
   },
-
-  liSns:{
-    float:'left',
-    marginLeft:'10px',
-  },
-
-  liBest:{
-    float:'left',
-    marginLeft:'30px',
-    fontSize:'12px'
-  },
-
-
-  select:{
-    width:'15%',
-    float:'right',
-    color:'#000000',
-
-  }
-
-
 
 }))
 
