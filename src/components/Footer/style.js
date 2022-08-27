@@ -5,12 +5,9 @@ const footerStyles = makeStyles((theme)=>({
     background:'#000000',
     color:'#FFFFFF',
     width:'100%',
-    height:'300px',
-
   },
 
   divTop:{
-    borderBottom:'1px solid',
     display : 'flex',
   },
 
@@ -25,31 +22,20 @@ const footerStyles = makeStyles((theme)=>({
     ['@media screen and (max-width: 900px)']:{
       display : 'none'
     },
-    width:'250px',
+    width:'130px',
     borderRight:'1px solid'
   },
 
   divImg:{
     margin: 'auto',
     display: 'block',
-    width: '200px',
-  },
-
-  divRight:{
-    display : 'flex',
-    height:'100%',
-    flex:1,
-  },
-
-  divR:{
-    flex : 1,
-    paddingTop:'40px',
-    marginLeft:'30px',
+    width: '70px',
   },
 
   foundingYear:{
     ['@media screen and (max-width: 900px)']:{
       alignSelf: 'baseline',
+      paddingBottom: '20px',
     },
     marginLeft : '30px',
     fontSize: '12px',
@@ -57,10 +43,14 @@ const footerStyles = makeStyles((theme)=>({
   },
 
   ul:{
+    ['@media screen and (max-width: 900px)']:{
+      margin: 'revert'
+    },
+
     listStyle:'none',
     padding:'0',
-    lineHeight:'30px',
-    
+    margin:'0',
+    alignSelf: 'center',
   },
 
   li:{
@@ -72,20 +62,3 @@ const footerStyles = makeStyles((theme)=>({
 }))
 
 export default footerStyles
-
-
-  
-//   .contents {
-//     width: 96%;
-//     max-width: 1100px;
-//     height: 100%;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     margin: 0 auto;
-//   }
-  
-//   .title {
-//     font-weight: 600;
-//     font-size: 20px;
-//   }
