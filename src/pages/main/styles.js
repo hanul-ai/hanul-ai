@@ -6,7 +6,6 @@ const useStyles = makeStyles((theme) => ({
         width: '100%'
     },
     uploadContainer: {
-        width: '100%',
         maxWidth: '1200px',
         padding: '3rem 2rem',
         margin: '0 auto'
@@ -73,26 +72,6 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         whiteSpace: 'nowrap',
         backgroundColor: 'transparent'
-    },
-    dropdownMenu: {
-        position: 'absolute',
-        willChange: 'transform',
-        top: '0px',
-        left: '0px',
-        transform: 'translated3d(2px, 28px, 0px)',
-        display: 'block',
-        padding: '0',
-        fontSize: '.875rem',
-        zIndex: '1000',
-        float: 'left',
-        minWidth: '10rem',
-        margin: '0.125rem 0 0',
-        color: '#000',
-        textAlign: 'left',
-        listStyle: 'none',
-        backgroundColor: '#fff',
-        backgroundClip: 'paddingBox',
-        webkitBoxShadow: '0 0.5rem 1remrgba(0,0,0,0.175)'
     },
     formatSelection: {
         width: '440px',
@@ -167,7 +146,68 @@ const useStyles = makeStyles((theme) => ({
     uploadItem: {
         width: '40px',
         height: '40px'
-    }
+    },
+    dropdownMenu: {
+        position: 'absolute',
+        background: '#fff',
+        borderRadius: '2px',
+        top: '100%',
+        left: '0',
+        textAlign: 'left',
+        boxShadow: '0 0.5rem 1rem rgba(0, 0, 0, 0.175)',
+        opacity: '0',
+        visibility: 'hidden',
+        transform: 'translateY(-20px)',
+        transition: 'opacity 0.4e ease, transform 0.4s ease, visibility 0.4s',
+        padding: '0.5rem 0',
+        margin: '0.125rem 0 0',
+        float: 'left',
+        minWidth: '10rem',
+        zIndex: '1000',
+        fontSize: '1rem',
+        listStyle: 'none',
+        width: '260px'
+    },
+    active: {
+        opacity: '1',
+        visibility: 'visible',
+        transform: 'translateY(0)'
+    },
+    navItem: {
+        listStyle: 'none',
+        width: 'calc(100% - 10px)',
+        minWidth: '80px',
+        height: '32px',
+        margin: '0 auto',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: '14px',
+        border: '1px solid #ccc',
+        borderRadius: '100px',
+        color: 'rgba(0, 0, 0, 0.72)',
+        fontWeight: '600'
+    },
+    tabContent: {
+        flex: '1',
+        overflowY: 'auto',
+        backgroundColor: '#fff',
+        display: 'flex',
+        padding: '8px 19px 0'
+    },
+    noGutter: {
+        paddingRight: '0',
+        paddingLeft: '0',
+        display: 'flex',
+        flexWrap: 'wrap'
+    },
+    contentSize: {
+        marginBottom: '0.5rem',
+        webkitBoxFlex: '0',
+        maxWidth: '50%',
+        flex: '0 0 50%'
+
+    },
 }))
 
 export default useStyles;
