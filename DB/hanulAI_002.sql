@@ -1,6 +1,6 @@
 -- MariaDB dump 10.19  Distrib 10.6.5-MariaDB, for Win64 (AMD64)
 --
--- Host: localhost    Database: hanulAI
+-- Host: localhost    Database: hanulai
 -- ------------------------------------------------------
 -- Server version	10.6.5-MariaDB
 
@@ -101,12 +101,13 @@ DROP TABLE IF EXISTS `post`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `post` (
   `num` int(11) NOT NULL AUTO_INCREMENT,
-  `type` char(1) NOT NULL COMMENT 'G / M',
+  `type` char(1) NOT NULL COMMENT 'G(공지) / M(문의)',
   `email` varchar(100) NOT NULL,
   `time` datetime NOT NULL,
   `title` varchar(100) NOT NULL,
+  `hits` int(11) NOT NULL DEFAULT 0,
+  `check` char(1) NOT NULL DEFAULT 'N' COMMENT 'Y/N',
   `content` longtext NOT NULL,
-  `file` longtext NOT NULL,
   PRIMARY KEY (`num`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='post';
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -121,6 +122,32 @@ LOCK TABLES `post` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `related`
+--
+
+DROP TABLE IF EXISTS `related`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `related` (
+  `num` int(11) NOT NULL,
+  `post_num` int(11) NOT NULL,
+  `content` text NOT NULL,
+  PRIMARY KEY (`num`),
+  KEY `FK_related_post` (`post_num`),
+  CONSTRAINT `FK_related_post` FOREIGN KEY (`post_num`) REFERENCES `post` (`num`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='post 답글';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `related`
+--
+
+LOCK TABLES `related` WRITE;
+/*!40000 ALTER TABLE `related` DISABLE KEYS */;
+/*!40000 ALTER TABLE `related` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `stat`
 --
 
@@ -129,7 +156,8 @@ DROP TABLE IF EXISTS `stat`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `stat` (
   `today` date NOT NULL,
-  `num` int(11) NOT NULL DEFAULT 0,
+  `today_num` int(11) NOT NULL DEFAULT 0,
+  `image_num` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`today`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='admin page stat 데이터';
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -153,7 +181,7 @@ DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
-  `name` varchar(50) NOT NULL COMMENT '닉네임',
+  `phone` varchar(50) NOT NULL,
   `joindate` date NOT NULL,
   PRIMARY KEY (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='일반 user 테이블';
@@ -177,4 +205,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-08-21 15:47:08
+-- Dump completed on 2022-09-18 15:28:31
