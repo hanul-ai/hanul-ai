@@ -6,7 +6,12 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       primaryKey: true
     },
-    num: {
+    today_num: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0
+    },
+    image_num: {
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 0

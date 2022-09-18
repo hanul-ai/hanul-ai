@@ -10,10 +10,9 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(100),
       allowNull: false
     },
-    name: {
+    phone: {
       type: DataTypes.STRING(50),
-      allowNull: false,
-      comment: "닉네임"
+      allowNull: false
     },
     joindate: {
       type: DataTypes.DATEONLY,

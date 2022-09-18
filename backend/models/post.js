@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
     type: {
       type: DataTypes.CHAR(1),
       allowNull: false,
-      comment: "G \/ M"
+      comment: "G(공지) \/ M(문의)"
     },
     email: {
       type: DataTypes.STRING(100),
@@ -24,11 +24,18 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(100),
       allowNull: false
     },
-    content: {
-      type: DataTypes.TEXT,
-      allowNull: false
+    hits: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0
     },
-    file: {
+    check: {
+      type: DataTypes.CHAR(1),
+      allowNull: false,
+      defaultValue: "N",
+      comment: "Y\/N"
+    },
+    content: {
       type: DataTypes.TEXT,
       allowNull: false
     }
