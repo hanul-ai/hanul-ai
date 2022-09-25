@@ -1,6 +1,6 @@
 const express = require("express");
 const { Sequelize } = require("sequelize");
-const { db, sequelize, Sequelize } = require("../../models/init-models");
+const { db, sequelize, Sequelize } = require("../../models/index");
 
 const router = express.Router();
 
@@ -11,11 +11,6 @@ router.get("/test", async(req, res, next) => {
     })
 });
 
-//register
-router.post("/register" ,async(req, res, next) => {
-
-});
-
 //login
 router.post("/login", async(req, res, next) => { //post의 경우 대부분 body값으로 전달
     // let { data } = req.query;
@@ -24,7 +19,7 @@ router.post("/login", async(req, res, next) => { //post의 경우 대부분 body
     let sql = `select email, password from user where email='${email}'`;
 
     try {
-        let a = await Sequelize.query(sql);
+        let a = await sequelize.query(sql);
 
         res.status(200).send({
             data: true,
@@ -35,7 +30,5 @@ router.post("/login", async(req, res, next) => { //post의 경우 대부분 body
         });
     }
 });
-
-//forgot password (send mail)
 
 module.exports = router;
