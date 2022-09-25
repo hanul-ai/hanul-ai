@@ -5,81 +5,52 @@ const footerStyles = makeStyles((theme)=>({
     background:'#000000',
     color:'#FFFFFF',
     width:'100%',
-    height:'559px',
-    marginBottom:'10px'
-
   },
 
   divTop:{
-    width:'100%',
-    height:'80%',
-    float:'top',
-    borderBottom:'1px solid'
-
+    display : 'flex',
   },
 
   divBottom:{
-    width:'100%',
-    height:'20%',
-    float:'bottom',
-    //flex:1
+    ['@media screen and (max-width: 900px)']:{
+      flexDirection: 'column',
+    },
+    display : 'flex',
   },
 
-  divLift:{
-    width:'31%',
-    float:'left',
-    height:'100%',
+  divLeft:{
+    ['@media screen and (max-width: 900px)']:{
+      display : 'none'
+    },
+    width:'130px',
     borderRight:'1px solid'
-
-    //flex:1
   },
-
-  divRight:{
-    width:'68%',
-    float:'right',
-    height:'100%',
-
-    //flex:1
-
-  },
-
-  divR1:{
-    float:'left',
-    width:'33%',
-    paddingTop:'70px',
-
-
-  },
-
-  divR2:{
-    float:'left',
-    width:'33%',
-    paddingTop:'70px'
-
-  },
-
-  divR3:{
-    float:'left',
-    width:'33%',
-    paddingTop:'70px'
-
-  },
-
 
   divImg:{
-    marginLeft:'100px',
-    marginTop:'100px',
-    // vertical_align:'right'
-    // width:'100%',
-    // height:'100%'
+    margin: 'auto',
+    display: 'block',
+    width: '70px',
+  },
 
+  foundingYear:{
+    ['@media screen and (max-width: 900px)']:{
+      alignSelf: 'baseline',
+      paddingBottom: '20px',
+    },
+    marginLeft : '30px',
+    fontSize: '12px',
+    alignSelf: 'center',
   },
 
   ul:{
+    ['@media screen and (max-width: 900px)']:{
+      margin: 'revert'
+    },
+
     listStyle:'none',
     padding:'0',
-    lineHeight:'30px',
-    
+    margin:'0',
+    alignSelf: 'center',
   },
 
   li:{
@@ -88,32 +59,6 @@ const footerStyles = makeStyles((theme)=>({
     fontSize:'12px'
   },
 
-  select:{
-    width:'15%',
-    float:'right',
-    color:'#000000',
-
-  }
-
-
-
 }))
 
 export default footerStyles
-
-
-  
-//   .contents {
-//     width: 96%;
-//     max-width: 1100px;
-//     height: 100%;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     margin: 0 auto;
-//   }
-  
-//   .title {
-//     font-weight: 600;
-//     font-size: 20px;
-//   }

@@ -11,7 +11,8 @@ const headerStyles = makeStyles((theme)=>({
     height:'72px',
     backgroundColor: '#FFFFFF',
     display:'flex',
-    borderBottom:'1px solid'
+    borderBottom:'1px solid',
+    zIndex:'1'
 
     
   },
@@ -39,6 +40,7 @@ const headerStyles = makeStyles((theme)=>({
     float:'left',
     marginLeft:'30px',
   },
+
 
 
 

@@ -2,10 +2,6 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
 
-    testStyle : {
-        
-    },
-
     pageWrap : {
         background: 'linear-gradient(89.03deg,#0d0521,#31137c 51.85%,#761796 99.06%)',
         height: '100vh',
@@ -14,20 +10,19 @@ const useStyles = makeStyles({
         justifyContent: 'space-around'
     },
     form : {
-        ['@media screen and (min-width: 800px)']:{
+        ['@media screen and (min-width: 900px)']:{
             maxWidth: '400px',
             flex: '0 0 400px',
             borderRadius: '8px',
             marginRight: '5vw',
         },
-        ['@media screen and (max-width: 800px)']:{
+        ['@media screen and (max-width: 900px)']:{
             height : '100%'
         },
         backgroundColor: '#fff',
         padding: '40px 32px 16px',
-        minHeight: '512px',
+        minHeight: '460px',
         width: '100%',
-        position: 'relative',
         boxSizing: 'border-box',
     },
     formName : {
@@ -40,60 +35,11 @@ const useStyles = makeStyles({
         width : '85px',
         height : '30px',
     },
-    formOtherSignUpList : {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center',
-        flexWrap: 'wrap',
-
-        "& a": {
-            color: '-webkit-link',
-            cursor: 'pointer',
-            margin: '0 6px',
-        }
-    },
-    formDivArea : {
-        marginTop : '32px',
-        position : 'relative',
-        margin: '0 auto',
-        maxWidth: '335px',
-    },
-    formDivAreaLine :
-    {
-        "&::before" : {
-            width: '130px',
-            left: '0',
-            content: '""',
-            position: 'absolute',
-            height: '.5px',
-            backgroundColor: '#c4c4c4',
-            top: '11.25px',
-        },
-        "&::after" : {
-            width: '130px',
-            right: '0',
-            content: '""',
-            position: 'absolute',
-            height: '.5px',
-            backgroundColor: '#c4c4c4',
-            top: '11.25px',
-        },
-        display: 'block',
-        width: '120px',
-        margin: '0 auto',
-        fontSize: '14px',
-        letterSpacing: '.2px',
-        lineHeight: '20px',
-        textAlign: 'center',
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        whiteSpace: 'nowrap',
-    },
     formInputBox : {
         marginTop : '32px',
     },
     formInputIsError : {
+        position: 'relative',
         marginBottom : '20px',
     },
     formInput : {
@@ -125,7 +71,7 @@ const useStyles = makeStyles({
         textAlign: 'center',
         lineHeight: '45px',
         position: 'absolute',
-        left: '35px',
+        left: '5px',
     },
     formPrimaryButton : {
         "&:hover" : {
@@ -181,10 +127,13 @@ const useStyles = makeStyles({
         cursor: 'pointer',
     },
     introImage : {
-        ['@media screen and (min-width: 800px)']:{
-            display : 'block',
+        ['@media screen and (max-width: 1200px)']:{
+            maxWidth: '450px',
         },
-        display: 'none',
+        ['@media screen and (max-width: 900px)']:{
+            display: 'none',
+        },
+        display : 'block',
         width: '28vw',
         maxWidth: '538px',
         flex: '0 0 515px',

@@ -9,20 +9,19 @@ const useStyles = makeStyles({
         justifyContent: 'space-around'
     },
     form : {
-        ['@media screen and (min-width: 800px)']:{
+        ['@media screen and (min-width: 900px)']:{
             maxWidth: '400px',
             flex: '0 0 400px',
             borderRadius: '8px',
             marginRight: '5vw',
         },
-        ['@media screen and (max-width: 800px)']:{
+        ['@media screen and (max-width: 900px)']:{
             height : '100%'
         },
         backgroundColor: '#fff',
         padding: '40px 32px 16px',
         minHeight: '512px',
         width: '100%',
-        position: 'relative',
         boxSizing: 'border-box',
     },
     formName : {
@@ -34,58 +33,6 @@ const useStyles = makeStyles({
     formLogo : {
         width : '85px',
         height : '30px',
-    },
-    formOtherLoginList : {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center',
-        flexWrap: 'wrap',
-
-        "& a": {
-            color: '-webkit-link',
-            cursor: 'pointer',
-            margin: '0 6px',
-        }
-    },
-    formDivArea : {
-        marginTop : '32px',
-        marginBottom : '16px',
-        position : 'relative',
-        margin: '0 auto',
-        maxWidth: '335px',
-    },
-    formDivAreaLine :
-    {
-        "&::before" : {
-            width: '70px',
-            left: '29px',
-            content: '""',
-            position: 'absolute',
-            height: '.5px',
-            backgroundColor: '#c4c4c4',
-            top: '11.25px',
-        },
-        "&::after" : {
-            width: '70px',
-            right: '29px',
-            content: '""',
-            position: 'absolute',
-            height: '.5px',
-            backgroundColor: '#c4c4c4',
-            top: '11.25px',
-        },
-        display: 'block',
-        width: '120px',
-        margin: '0 auto',
-        fontSize: '14px',
-        letterSpacing: '.2px',
-        lineHeight: '20px',
-        textAlign: 'center',
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        whiteSpace: 'nowrap',
-        color: 'rgba(0,0,0,.72)',
     },
     formInputBox : {
         marginTop : '32px',
@@ -187,10 +134,13 @@ const useStyles = makeStyles({
         cursor: 'pointer',
     },
     introImage : {
-        ['@media screen and (min-width: 800px)']:{
-            display : 'block',
+        ['@media screen and (max-width: 1200px)']:{
+            maxWidth: '450px',
         },
-        display: 'none',
+        ['@media screen and (max-width: 900px)']:{
+            display: 'none',
+        },
+        display : 'block',
         width: '28vw',
         maxWidth: '538px',
         flex: '0 0 515px',
