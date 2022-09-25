@@ -2,8 +2,12 @@ const express = require("express");
 
 const router = express.Router();
 
-//image upload
+//admin login
 
-//history
+//user page
+
+//post
+
+//stat
 
 module.exports = router;
