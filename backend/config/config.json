@@ -2,8 +2,8 @@
     "database": {
         "development": {
             "username": "root",
-            "password": "",
-            "database": "",
+            "password": "hjs2632",
+            "database": "hanulai",
             "host": "127.0.0.1",
             "dialect": "mysql",
             "define": {

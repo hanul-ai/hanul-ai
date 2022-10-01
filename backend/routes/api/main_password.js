@@ -15,19 +15,7 @@ router.post("/mail", async(req, res, next) => {
             text: 'new password: ' + new_pass,
         };
 
-        mailer.sendGmail(emailParam);
-        new_pass = await encrypt(new_pass);
-
-        await db.user_owner
-            .update({
-                password: new_pass
-            },
-            { where : { email } })
-            .then(async result => {
-                res.status(200).send({
-                    data: true,
-                });
-            });
+        
     } catch(err) {
         res.status(500).send({
             data: false,
