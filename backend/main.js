@@ -1,8 +1,10 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const flash = require("connect-flash");
 const methodOverride = require("method-override");
+const expressEjsLayouts = require("express-ejs-layouts");
 const cors = require("cors");
 const morgan = require("morgan");
 const path = require("path");
@@ -10,10 +12,14 @@ const dotenv = require("dotenv");
 const passport = require("passport");
 const helmet = require("helmet");
 const helmetCsp = require("helmet-csp");
+const swaggerUi = require("swagger-ui-express");
+const swaggerFile = require("./swagger-output.json");
+const { logger, stream } = require("./logger");
 
 dotenv.config();
 const app = express();
 app.set("port", process.env.PORT || 8080);
+app.set("view engine", "ejs");
 
 //추가 보안
 app.use(helmet());
@@ -29,10 +35,14 @@ app.use(
 );
 
 //서버 설정
+app.use(bodyParser.json({limit: '100mb'}));
+app.use(bodyParser.urlencoded({limit: '100mb', extended: true}));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser(process.env.COOKIE_SECRET));
+app.use(expressEjsLayouts);
 app.use(methodOverride("_method"));
+app.use("/hanulAI-api", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 // app.use(cors(corsOptions));
 
 // 세션 설정
@@ -81,6 +91,9 @@ app.use((err, req, res, next) => {
     }
     res.status(500).send("error");
 });
+
+// 로그 기록
+app.use(morgan("[:remote-addr] :status :method :url :user-agent", {stream} ));
 
 //서버 실행
 app.listen(app.get("port"), function() {

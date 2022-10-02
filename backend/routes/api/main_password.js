@@ -1,6 +1,7 @@
 const express = require("express");
 const { db, sequelize, Sequelize } = require("../../models/index");
 const mailer = require("../../nodemailer");
+const { logger } = require("../../logger");
 
 const router = express.Router();
 
@@ -11,11 +12,23 @@ router.post("/mail", async(req, res, next) => {
     try {
         let emailParam = {
             toEmail: email,
-            subject: 'Step New Password',
+            subject: 'Hanul AI new password PLZ',
             text: 'new password: ' + new_pass,
         };
 
-        
+        mailer.sendGmail(emailParam);
+        new_pass = await encrypt(new_pass);
+
+        await db.user
+            .update({
+                password: new_pass
+            },
+            { where : { email } })
+            .then(async result => {
+                res.status(200).send({
+                    data: true,
+                });
+            });
     } catch(err) {
         res.status(500).send({
             data: false,

@@ -27,7 +27,8 @@ module.exports = function(sequelize, DataTypes) {
     hits: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 0
+      defaultValue: 0,
+      comment: "조회수"
     },
     check: {
       type: DataTypes.CHAR(1),
